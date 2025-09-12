@@ -48,9 +48,9 @@ public class ToDoList {
         System.out.print("Введите ключевое слово: ");
         String keyword = sc.nextLine();
         Iterator<String> iter = tasks.iterator();
-        while(iter.hasNext()){
+        while (iter.hasNext()) {
             String task = iter.next();
-            if(task.contains(keyword)){
+            if (task.contains(keyword)) {
                 iter.remove();
             }
         }
@@ -59,9 +59,9 @@ public class ToDoList {
     private static void removeTaskByName() {
         System.out.print("Введите название задачи: ");
         String task = sc.nextLine();
-        if (tasks.contains(task)){
+        if (tasks.contains(task)) {
             tasks.remove(task);
-        }else{
+        } else {
             System.out.println("Такой задачи нет");
         }
     }
@@ -69,9 +69,9 @@ public class ToDoList {
     private static void removeTaskByNumber() {
         System.out.print("Введите номер задачи: ");
         int position = Integer.parseInt(sc.nextLine()) - 1;
-        if (position >= 0 && position < tasks.size()){
-        tasks.remove(position);
-        }else{
+        if (position >= 0 && position < tasks.size()) {
+            tasks.remove(position);
+        } else {
             System.out.println("Такой задачи нет");
         }
     }
